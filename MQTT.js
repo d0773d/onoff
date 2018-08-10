@@ -268,7 +268,7 @@ MQTT.prototype.connect = function (client) {
             }
             else if (type === TYPE.PINGREQ) {
                 //client.write(fromCharCode(TYPE.PINGRESP << 4) + "\x00");
-                this.ping();
+                mqo.ping();
             }
             else if (type === TYPE.PINGRESP) {
                 mqo.emit('ping_reply');
